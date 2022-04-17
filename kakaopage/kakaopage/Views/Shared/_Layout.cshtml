@@ -1,0 +1,76 @@
+﻿<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <link rel="shortcut icon" href="/image/favicon.ico" type="image/x-icon" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>홈 - 웹툰 | 카카오페이지</title>
+    <link rel="stylesheet" href="~/b_css/b-css.css" />
+</head>
+<body>
+    <div>
+        <div class="css-header">
+            <div style="width:720px; display:flex; margin:0 auto; min-width:0;">
+                <h1 style="display:block; margin:0">
+                    <img src="/image/logo-kakaopage.svg" class="css-title" />
+                </h1>
+                <div style="display:flex; flex:1 0 auto; justify-content:flex-end">
+                    <div style="display:block">
+                        <div class="searchBarWrap">
+                            <div style="padding:2px 3px 2px 11px;">
+                                <form>
+                                    <input maxlength="50" style="width:136px; height:100%; border:0; padding:0;" placeholder="" value="" />
+                                </form>
+                            </div>
+                            <div style="padding-right: 10px; align-items:center; display:flex">
+                                <img src="/image/btn_search.png" alt="검색 버튼" style="width:20px; height:20px; cursor:pointer;"/>
+                            </div>
+                        </div>
+                    </div>
+                    <div style="margin-left: 24px; margin-top: 31px; position:relative">
+                        <a style="cursor: pointer">
+                            <img src="/image/pc-logo-stage.svg" />
+                        </a>
+                        <img src="/image/stage-tooltip.svg" style="position:absolute; top:29px; left: -37px; width:137px; height: 33px;" />
+                    </div>
+                    <button class="buttons">
+                        <div style="cursor: pointer;">캐시충전</div>
+                        <div class="buttons-center-div"></div>
+                        <div style="cursor: pointer;">로그인</div>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div style="margin:0px; margin-top:167px; top:0; left:0; right:0;">
+            <nav class="navbar">
+                <ul style="display:flex; width:720px; margin:0 auto; padding:0px">
+                    <li class="navbar-item">
+                        <img src="/image/menu_home.svg" class="navbar-item-image" />
+                    </li>
+                    <li class="navbar-item">
+                        <img src="/image/menu_toon.svg" class="navbar-item-image" />
+                    </li>
+                    <li class="css-j9o58w">
+                        <img src="/image/menu_novel.svg" class="navbar-item-image" />
+                    </li>
+                    <li class="navbar-item">
+                        <img src="/image/menu_vod.svg" class="navbar-item-image" />
+                    </li>
+                    <li class="navbar-item">
+                        <img src="/image/menu_broadcast.svg" class="navbar-item-image" />
+                    </li>
+                    <li class="navbar-item">
+                        <img src="/image/menu_book.svg" class="navbar-item-image" />
+                    </li>
+                </ul>
+            </nav>
+
+            @RenderBody()
+        </div>
+    </div>
+
+    <script src="~/lib/jquery/dist/jquery.min.js" async></script>
+    <script src="~/b_js/b-script.js" async></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>
